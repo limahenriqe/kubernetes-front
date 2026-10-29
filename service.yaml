@@ -1,0 +1,16 @@
+apiVersion: V1
+
+kind: Service
+
+metadata:
+  name: kubernetes-front-service
+  namespace: aluno13
+
+spec: 
+  selector: 
+    app: kubernetes-front
+  
+  ports:
+    - port: 80
+      targetPort: 300
+  type: NodePort
